@@ -26,21 +26,21 @@ const PostDetails = () => {
   }, [post]);
 
   return (
-    <div className="blog-details">
+    <section className="post_details">
       {isLoading && <div>...Loading</div>}
       {error && <div>{error}</div>}
 
       {post && (
         <article>
           <h2>{post.title}</h2>
-          <p className="author">
+          <p className="post_author">
             Written by: <span>{post.author}</span>
           </p>
-          <p className="body">{post.body}</p>
-          <button onClick={handleClick}>Delete</button>
+          <p className="post_body">{post.body}</p>
+          <button onClick={handleClick}>Delete Post</button>
         </article>
       )}
-    </div>
+    </section>
   );
 };
 

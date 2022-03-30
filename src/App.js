@@ -3,7 +3,7 @@ import HeaderBar from "./layout/HeaderBar";
 import { useState, useEffect } from "react";
 import Home from "./components/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Create from "./components/Create";
+import CreatePost from "./components/CreatePost";
 import PostDetails from "./components/PostDetails";
 import NotFound from "./components/NotFound";
 
@@ -29,7 +29,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/create" element={<Create />} />
+            <Route path="/create" element={<CreatePost />} />
             <Route path="/posts/:post_id" element={<PostDetails />} />
             {/* catch any other route */}
             <Route path="*" element={<NotFound />} />

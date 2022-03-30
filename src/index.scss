@@ -7,7 +7,8 @@ $color_light_grey: #ccc;
 
 @import "./layout/BurgerBtn";
 @import "./layout/Navbar";
-@import "./components/PostList";
+@import "./components/CreatePost";
+
 /* base styles */
 * {
   margin: 0;
@@ -28,9 +29,13 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
+h1,
+h2,
+h3 {
+  color: $color_red;
+}
 h2 {
   font-size: 20px;
-  color: $color_red;
   margin-bottom: 8px;
 }
 
@@ -44,9 +49,6 @@ h2 {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #f2f2f2;
-    h1 {
-      color: $color_red;
-    }
   }
 }
 //main
@@ -57,45 +59,37 @@ main {
   padding-top: 100px;
 }
 
-//post details page
-.blog-details,
-.not-found {
+.post_list_section {
+  > h2 {
+    padding-left: 16px;
+    color: inherit;
+  }
+}
+//post_list, post details, not_found_page
+.post_list,
+.post_details,
+.not_found_page {
+  .post_preview {
+    padding: 10px 16px;
+    margin: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+    &:hover {
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
   a {
     display: block;
     color: $color_red;
-    margin-top: 1rem;
+    text-decoration: none;
   }
-  .author {
+  .post_author {
     margin-bottom: 1.5rem;
     span {
       color: $color_red;
     }
   }
-  .body {
+  .post_body {
     line-height: 1.5rem;
     margin-bottom: 1rem;
-  }
-}
-
-//create new blog form
-.create {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-  label {
-    text-align: left;
-    display: block;
-  }
-
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 6px 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    display: block;
-    background-color: transparent;
   }
 }

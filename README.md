@@ -10,11 +10,9 @@ To clone
 
 `git clone https://github.com/karinlj/my-react-blog-2022.git`
 
-Go to folder
+To install
 
 `cd my-react-blog`
-
-To install
 
 `npm install`
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Create = () => {
+const CreatePost = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Hugo");
@@ -32,48 +32,48 @@ const Create = () => {
       setIsLoading(false);
       //back 1
       navigate(-1);
-      //to home
-      // navigate("/");
     });
   };
 
   return (
-    <div className="create">
+    <div className="create_post">
       <h2>Add a New Blog</h2>
 
       <form onSubmit={handleSubmit}>
-        <label>Blog title:</label>
-        <input
-          type="text"
-          required
-          value={title}
-          //when changing this input=>change title
-          //update title with the event object
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <label>
+          Blog title:
+          <input
+            type="text"
+            required
+            value={title}
+            //when changing this input=>change title
+            //update title with the event object
+            onChange={(e) => setTitle(e.target.value)}
+          />
+        </label>
 
-        <label>Blog body:</label>
-        <textarea
-          required
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-        ></textarea>
+        <label>
+          Blog body:
+          <textarea
+            required
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+          ></textarea>
+        </label>
 
-        <label>Blog author:</label>
-        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="hugo">Hugo</option>
-          <option value="filip">Filip</option>
-        </select>
+        <label>
+          Blog author:
+          <select value={author} onChange={(e) => setAuthor(e.target.value)}>
+            <option value="hugo">Hugo</option>
+            <option value="filip">Filip</option>
+          </select>
+        </label>
+
         {!isLoading && <button onClick={handleSubmit}>Add Post</button>}
         {isLoading && <button disabled>Adding Post...</button>}
-
-        {/* <br />
-        <p>{title}</p>
-        <p>{body}</p>
-        <p>{author}</p> */}
       </form>
     </div>
   );
 };
 
-export default Create;
+export default CreatePost;
