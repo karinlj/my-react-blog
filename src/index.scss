@@ -28,6 +28,9 @@ button {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  &:hover{
+    filter: brightness(150%);
+  }
 }
 h1,
 h2,
@@ -69,6 +72,22 @@ main {
 .post_list,
 .post_details,
 .not_found_page {
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+      background: $color_red;
+      color: #fff;
+      border: 0;
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover{
+        filter: brightness(150%);
+      }
+    }
+  }
   .post_preview {
     padding: 10px 16px;
     margin: 10px 0;

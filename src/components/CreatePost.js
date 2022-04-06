@@ -41,7 +41,7 @@ const CreatePost = () => {
 
       <form onSubmit={handleSubmit}>
         <label>
-          Blog title:
+          Title:
           <input
             type="text"
             required
@@ -53,7 +53,7 @@ const CreatePost = () => {
         </label>
 
         <label>
-          Blog body:
+          Body:
           <textarea
             required
             value={body}
@@ -62,7 +62,7 @@ const CreatePost = () => {
         </label>
 
         <label>
-          Blog author:
+          Author:
           <select value={author} onChange={(e) => setAuthor(e.target.value)}>
             <option value="hugo">Hugo</option>
             <option value="filip">Filip</option>

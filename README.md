@@ -44,6 +44,11 @@ The dist folder generated can be used for deployment in a web server, such as Ap
 
 - **Karin Ljunggren** - [karinlj](https://github.com/karinlj)
 
+## Acknowledgements
+
+Thank's to The Net Ninja.  
+`https://www.youtube.com/c/TheNetNinja`
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CreatePost from "./components/CreatePost";
 import PostDetails from "./components/PostDetails";
 import NotFound from "./components/NotFound";
+import EditPost from "./components/EditPost";
 
 //calling it Router
 function App() {
@@ -31,6 +32,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<CreatePost />} />
             <Route path="/posts/:post_id" element={<PostDetails />} />
+            <Route path="/posts/edit/:post_id" element={<EditPost />} />
+
             {/* catch any other route */}
             <Route path="*" element={<NotFound />} />
           </Routes>

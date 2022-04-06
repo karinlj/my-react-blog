@@ -19,11 +19,16 @@
     margin-bottom: 0.8rem;
     text-decoration: none;
     &:hover {
-      color: $color_red;
-      text-decoration: underline;
+      div {
+        color: $color_red;
+        text-decoration: underline;
+        };
     }
     &.active {
+     div {
       color: $color_red;
+      };
+     
     }
   }
   &.open {

@@ -10,13 +10,13 @@ const Navbar = ({ isBtnOpen, toggleOpen }) => {
     <nav className={isBtnOpen ? "navbar open" : "navbar"}>
       <ul>
         <li>
-          <NavLink to="/" onClick={toggleOpen}>
-            Home
+          <NavLink to="/">
+            <div onClick={toggleOpen}>Home</div>
           </NavLink>
         </li>
         <li>
-          <NavLink to="/create" onClick={toggleOpen}>
-            New Post
+          <NavLink to="/create">
+            <div onClick={toggleOpen}>New Post</div>
           </NavLink>
         </li>
       </ul>
