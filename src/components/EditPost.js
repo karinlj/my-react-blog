@@ -50,8 +50,8 @@ const EditPost = () => {
   };
 
   return (
-    <div className="create_post">
-      <h2>Edit</h2>
+    <div className="edit_post">
+      <h2>Edit post</h2>
       {isLoading && <p>Loading...</p>}
       {error && <p>error...</p>}
       {data && (
@@ -78,8 +78,10 @@ const EditPost = () => {
           <label>
             Author:
             <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-              <option value="hugo">Hugo</option>
-              <option value="filip">Filip</option>
+              <option value={author}>{author}</option>
+
+              <option value="Hugo">Hugo</option>
+              <option value="Filip">Filip</option>
             </select>
           </label>
 

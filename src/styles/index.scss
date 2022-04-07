@@ -1,19 +1,14 @@
-$color_red: #f1356d;
-$color_dark_grey: #111;
-$color_medium_grey: #999;
-$color_light_grey: #ccc;
-
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-@import "./layout/BurgerBtn";
-@import "./layout/Navbar";
-@import "./components/CreatePost";
+@import "./variables";
+@import "../layout/BurgerBtn";
+@import "../layout/Navbar";
 
 /* base styles */
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: $text_color;
   box-sizing: border-box;
 }
 ul {
@@ -27,9 +22,11 @@ button {
   border: 0;
   padding: 8px;
   border-radius: 8px;
-  cursor: pointer;
-  &:hover{
-    filter: brightness(150%);
+  transition: all 0.2s ease-in;
+  border: 1px solid $color_red;
+  &:hover {
+    background: transparent;
+    color: $color_red;
   }
 }
 h1,
@@ -38,7 +35,7 @@ h3 {
   color: $color_red;
 }
 h2 {
-  font-size: 20px;
+  font-size: 1.4rem;
   margin-bottom: 8px;
 }
 
@@ -51,12 +48,12 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid $color_gray;
   }
 }
 //main
 main {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
   padding-top: 100px;
@@ -72,19 +69,22 @@ main {
 .post_list,
 .post_details,
 .not_found_page {
-  header{
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    a{
-      background: $color_red;
-      color: #fff;
+    a {
+      background: transparent;
+      color: $color_red;
+      border: 1px solid $color_red !important;
       border: 0;
       padding: 8px;
       border-radius: 8px;
       cursor: pointer;
-      &:hover{
-        filter: brightness(150%);
+      transition: all 0.2s ease-in;
+      &:hover {
+        background: $color_red;
+        color: #fff;
       }
     }
   }
@@ -110,5 +110,39 @@ main {
   .post_body {
     line-height: 1.5rem;
     margin-bottom: 1rem;
+  }
+}
+
+//create, edit
+.create_post,
+.edit_post {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  label {
+    text-align: left;
+    display: block;
+    margin: 2rem 0 1rem 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid $color_gray;
+    box-sizing: border-box;
+    display: block;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  textarea {
+    min-height: 120px;
+    border: 1px solid $color_gray;
   }
 }
