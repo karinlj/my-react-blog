@@ -8,7 +8,7 @@
   z-index: 0; //obs!!  //same parent as vego_burger
   height: 100%;
   width: 250px; //obs!!
-  padding: 2rem;
+  padding: 3rem;
   padding-top: 6rem;
   transition: left ease-in 0.3s; //obs!!
   text-align: left;
@@ -22,13 +22,12 @@
       div {
         color: $color_red;
         text-decoration: underline;
-        };
+      }
     }
     &.active {
-     div {
-      color: $color_red;
-      };
-     
+      div {
+        color: $color_red;
+      }
     }
   }
   &.open {
