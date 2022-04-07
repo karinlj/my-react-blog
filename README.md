@@ -4,6 +4,8 @@
 
 React.js CRUD application with json-server and also a slide in navbar. Semantic and accessible.
 
+![Screenshot](/src/assets/Screenshot.jpg?raw=true "Screenshot")
+
 ## Installation
 
 To clone
