@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import { IHeaderBarProps } from "../interfaces";
 
-const BurgerBtn = ({ isBtnOpen, toggleOpen }) => {
+const BurgerBtn = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   useEffect(() => {
     //console.log("isBtnOpen Button", isBtnOpen);
   }, [isBtnOpen]);

@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
+import { IHeaderBarProps } from "../interfaces";
 
-const Navbar = ({ isBtnOpen, toggleOpen }) => {
+const Navbar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   useEffect(() => {
     // console.log("isBtnOpen Navbar", isBtnOpen);
   }, [isBtnOpen]);

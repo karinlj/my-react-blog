@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom";
-import useFetch from "../useFetch";
+import { useFetch } from "../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { IPost } from "../interfaces";
 
 const PostDetails = () => {
   const { post_id } = useParams();
@@ -11,18 +12,20 @@ const PostDetails = () => {
   const {
     data: post,
     isLoading,
-    error,
-  } = useFetch("http://localhost:9000/posts/" + post_id); //fetch the post I want
+    isError,
+  } = useFetch<IPost>("http://localhost:9000/posts/" + post_id); //fetch the post I want
 
   //DELETE post
   const handleClick = () => {
-    //fetch the post I want and delete it
-    fetch("http://localhost:9000/posts/" + post.id, {
-      method: "DELETE",
-    }).then(() => {
-      //back to home
-      navigate("/");
-    });
+    if (post) {
+      //fetch the post I want and delete it
+      fetch("http://localhost:9000/posts/" + post.id, {
+        method: "DELETE",
+      }).then(() => {
+        //back to home
+        navigate("/");
+      });
+    }
   };
   useEffect(() => {
     // console.log("post", post);
@@ -31,7 +34,7 @@ const PostDetails = () => {
   return (
     <section className="post_details">
       {isLoading && <p>...Loading</p>}
-      {error && <p>{error}</p>}
+      {isError && <p>Oops, could not fetch data...</p>}
 
       {post && (
         <article>

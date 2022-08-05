@@ -10,9 +10,10 @@ import EditPost from "./components/EditPost";
 
 //calling it Router
 function App() {
+  //here ts inferres the type
   const [isBtnOpen, setIsBtnOpen] = useState(false);
 
-  const toggleOpen = () => {
+  const toggleOpen = (): void => {
     setIsBtnOpen(!isBtnOpen);
   };
 

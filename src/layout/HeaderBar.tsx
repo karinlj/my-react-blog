@@ -1,6 +1,7 @@
 import BurgerBtn from "./BurgerBtn";
+import { IHeaderBarProps } from "../interfaces";
 
-const HeaderBar = ({ isBtnOpen, toggleOpen }) => {
+const HeaderBar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   return (
     <header>
       <BurgerBtn isBtnOpen={isBtnOpen} toggleOpen={toggleOpen} />

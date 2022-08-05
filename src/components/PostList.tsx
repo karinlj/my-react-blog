@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { IPost } from "../interfaces";
 
-const PostList = ({ posts }) => {
+type Props = {
+  posts: IPost[];
+};
+
+const PostList = ({ posts }: Props) => {
   return (
     <section className="post_list_section">
       <h2>All Blog Posts</h2>

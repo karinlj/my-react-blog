@@ -1,19 +1,20 @@
 import { useEffect } from "react";
-import useFetch from "../useFetch";
 import PostList from "./PostList";
+import { useFetch } from "../hooks/useFetch";
+import { IPost } from "../interfaces";
 
 const Home = () => {
-  const uri = "http://localhost:9000/posts";
+  const url = "http://localhost:9000/posts";
 
-  const { data: posts, isLoading, error } = useFetch(uri);
+  const { data: posts, isLoading, isError } = useFetch<IPost[]>(url);
 
   useEffect(() => {
-    // console.log("posts", posts);
+    //console.log("posts", posts);
   }, [posts]);
 
   return (
     <section className="home">
-      {error && <p>{error}</p>}
+      {isError && <p>Oops, could not fetch data...</p>}
       {isLoading && <p>...is Loading</p>}
       {posts && <PostList posts={posts} />}
     </section>
