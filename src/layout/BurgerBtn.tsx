@@ -8,7 +8,7 @@ const BurgerBtn = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
 
   return (
     <button
-      className={isBtnOpen ? "vego_burger open" : "vego_burger"}
+      className={isBtnOpen ? "vego_burger vego_burger_open" : "vego_burger"}
       aria-label="Menu"
       aria-expanded={isBtnOpen ? "true" : "false"}
       onClick={toggleOpen}

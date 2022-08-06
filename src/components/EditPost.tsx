@@ -84,7 +84,7 @@ const EditPost = () => {
   return (
     <div className="edit_post">
       <h2>Edit post</h2>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p className="loading">Loading...</p>}
       {isError && <p>Oops, could not fetch data...</p>}
       {data && (
         <form onSubmit={handleSubmit}>

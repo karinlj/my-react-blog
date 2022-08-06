@@ -33,7 +33,7 @@ const PostDetails = () => {
 
   return (
     <section className="post_details">
-      {isLoading && <p>...Loading</p>}
+      {isLoading && <p className="loading">Loading...</p>}
       {isError && <p>Oops, could not fetch data...</p>}
 
       {post && (
@@ -47,7 +47,9 @@ const PostDetails = () => {
             Written by: <span>{post.author}</span>
           </p>
           <p className="post_body">{post.body}</p>
-          <button onClick={handleClick}>Delete Post</button>
+          <button className="delete" onClick={handleClick}>
+            Delete Post
+          </button>
         </article>
       )}
     </section>

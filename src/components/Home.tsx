@@ -13,11 +13,11 @@ const Home = () => {
   }, [posts]);
 
   return (
-    <section className="home">
+    <>
       {isError && <p>Oops, could not fetch data...</p>}
-      {isLoading && <p>...is Loading</p>}
+      {isLoading && <p className="loading">Loading...</p>}
       {posts && <PostList posts={posts} />}
-    </section>
+    </>
   );
 };
 

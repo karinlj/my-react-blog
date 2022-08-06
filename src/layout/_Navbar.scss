@@ -12,25 +12,25 @@
   padding-top: 6rem;
   transition: left ease-in 0.3s; //obs!!
   text-align: left;
-  background: #f2f2f2;
+  background: $color_beige;
   a {
-    color: inherit;
+    color: $color_dark_brown;
     display: block;
     margin-bottom: 0.8rem;
     text-decoration: none;
     &:hover {
       div {
-        color: $color_red;
+        color: $color_green;
         text-decoration: underline;
       }
     }
     &.active {
       div {
-        color: $color_red;
+        color: $color_green;
       }
     }
   }
-  &.open {
+  &.navbar_open {
     left: 0;
   }
 }

@@ -8,7 +8,7 @@ const Navbar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   }, [isBtnOpen]);
 
   return (
-    <nav className={isBtnOpen ? "navbar open" : "navbar"}>
+    <nav className={isBtnOpen ? "navbar navbar_open" : "navbar"}>
       <ul>
         <li>
           <NavLink to="/">

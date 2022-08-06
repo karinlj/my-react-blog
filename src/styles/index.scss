@@ -5,38 +5,62 @@
 @import "../layout/Navbar";
 
 /* base styles */
+body {
+  background: $color_dark_brown; //#151f1e; //#3d4e17;
+  color: $color_beige;
+}
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: $text_color;
+  //color: $text_color;
   box-sizing: border-box;
 }
+h1 {
+  color: $color_yellow;
+}
+h2 {
+  color: $color_green;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+h3 {
+  color: $color_beige;
+  margin-bottom: 0.3rem;
+}
+p {
+  color: #fff;
+  &.loading {
+    color: $color_green;
+  }
+}
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 button {
-  background: $color_red;
-  color: #fff;
+  background: $color_dark_brown;
+  color: $color_yellow;
   border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  transition: all 0.2s ease-in;
-  border: 1px solid $color_red;
+  padding: 10px;
+  border-radius: $theme_border_radius;
+  transition: all 0.3s ease-in;
+  border: 1px solid $color_yellow;
+  font-size: 1rem;
   &:hover {
-    background: transparent;
-    color: $color_red;
+    background: $color_yellow;
+    color: $color_dark_brown;
   }
-}
-h1,
-h2,
-h3 {
-  color: $color_red;
-}
-h2 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
+  &.delete {
+    color: $color_red;
+    border: 1px solid $color_red;
+    &:hover {
+      background: $color_red;
+      color: $color_dark_brown;
+    }
+  }
 }
 
 //header and nav
@@ -44,27 +68,27 @@ h2 {
   position: fixed;
   width: 100%;
   header {
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid $color_gray;
+    border-bottom: 1px solid $color_green;
   }
 }
 //main
 main {
+  border-radius: $theme_border_radius;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0rem auto;
   padding: 20px;
   padding-top: 100px;
 }
-
 .post_list_section {
   > h2 {
     padding-left: 16px;
-    color: inherit;
   }
 }
+
 //post_list, post details, not_found_page
 .post_list,
 .post_details,
@@ -75,36 +99,39 @@ main {
     justify-content: space-between;
     a {
       background: transparent;
-      color: $color_red;
-      border: 1px solid $color_red !important;
+      color: $color_yellow;
+      border: 1px solid $color_yellow !important;
       border: 0;
       padding: 8px;
-      border-radius: 8px;
+      border-radius: $theme_border_radius;
       cursor: pointer;
       transition: all 0.2s ease-in;
       &:hover {
-        background: $color_red;
-        color: #fff;
+        background: $color_yellow;
+        color: $color_dark_brown;
       }
     }
   }
   .post_preview {
     padding: 10px 16px;
     margin: 10px 0;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid $color_green;
+    border-top-left-radius: $theme_border_radius;
+    border-top-right-radius: $theme_border_radius;
+    transition: all 0.3s ease-in;
     &:hover {
-      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.8);
     }
   }
   a {
     display: block;
-    color: $color_red;
+    color: $color_dark_brown;
     text-decoration: none;
   }
   .post_author {
     margin-bottom: 1.5rem;
     span {
-      color: $color_red;
+      color: $color_yellow;
     }
   }
   .post_body {
@@ -116,10 +143,11 @@ main {
 //create, edit
 .create_post,
 .edit_post {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
   label {
+    color: $color_green;
     text-align: left;
     display: block;
     margin: 2rem 0 1rem 0;
@@ -134,15 +162,16 @@ main {
     width: 100%;
     padding: 1rem;
     margin: 0.5rem 0;
-    border: 1px solid $color_gray;
+    border: 1px solid $color_dark_brown;
     box-sizing: border-box;
     display: block;
-    background-color: transparent;
-    border-radius: 5px;
+    background-color: $color_beige;
+    color: $color_dark_brown;
+    border-radius: $theme_border_radius;
     font-size: 0.9rem;
   }
   textarea {
-    min-height: 120px;
-    border: 1px solid $color_gray;
+    min-height: 130px;
+    border: 1px solid $color_dark_brown;
   }
 }

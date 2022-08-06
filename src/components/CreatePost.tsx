@@ -76,6 +76,7 @@ const CreatePost = () => {
           Title:
           <input
             type="text"
+            placeholder="Title"
             required
             value={title}
             id="title"
@@ -87,6 +88,7 @@ const CreatePost = () => {
           Body:
           <textarea
             required
+            placeholder="Something happened..."
             value={body}
             id="body"
             onChange={handleChange}
