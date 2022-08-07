@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useEffect } from "react";
 import { IHeaderBarProps } from "../interfaces";
+import { Colors } from "../components/styles/style";
+import styled from "styled-components";
 
 const Navbar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   useEffect(() => {
@@ -8,7 +10,7 @@ const Navbar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   }, [isBtnOpen]);
 
   return (
-    <nav className={isBtnOpen ? "navbar navbar_open" : "navbar"}>
+    <StyledNavbar open={isBtnOpen}>
       <ul>
         <li>
           <NavLink to="/">
@@ -21,8 +23,43 @@ const Navbar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
           </NavLink>
         </li>
       </ul>
-    </nav>
+    </StyledNavbar>
   );
 };
 
 export default Navbar;
+
+interface StyleProps {
+  open: boolean;
+}
+const StyledNavbar = styled.nav<StyleProps>`
+  height: 100%;
+  position: fixed; //obs!!
+  top: 0;
+  left: ${({ open }) => (open ? "0" : "-250px")}; //obs!
+  z-index: 0; //obs!  //same parent as header and vego_burger in that
+  height: 100%;
+  width: 250px; //obs!
+  padding: 3rem;
+  padding-top: 6rem;
+  transition: left ease-in 0.3s; //obs!
+  text-align: left;
+  background: ${Colors.color_beige};
+  a {
+    color: ${Colors.color_dark_brown};
+    display: block;
+    margin-bottom: 0.8rem;
+    text-decoration: none;
+    &:hover {
+      div {
+        color: ${Colors.color_green};
+        text-decoration: underline;
+      }
+    }
+    &.active {
+      div {
+        color: ${Colors.color_green};
+      }
+    }
+  }
+`;

@@ -7,6 +7,7 @@ import CreatePost from "./components/CreatePost";
 import PostDetails from "./components/PostDetails";
 import NotFound from "./components/NotFound";
 import EditPost from "./components/EditPost";
+import { GlobalStyles } from "./components/styles/Global";
 
 //calling it Router
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <GlobalStyles />
       <div className="App">
         <div className="menu">
           <HeaderBar isBtnOpen={isBtnOpen} toggleOpen={toggleOpen} />

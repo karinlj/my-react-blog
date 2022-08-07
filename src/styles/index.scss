@@ -1,45 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 @import "./variables";
-@import "../layout/BurgerBtn";
-@import "../layout/Navbar";
 
-/* base styles */
-body {
-  background: $color_dark_brown; //#151f1e; //#3d4e17;
-  color: $color_beige;
-}
-* {
-  margin: 0;
-  font-family: "Quicksand";
-  //color: $text_color;
-  box-sizing: border-box;
-}
-h1 {
-  color: $color_yellow;
-}
-h2 {
-  color: $color_green;
-  font-size: 1.5rem;
-  margin-top: 4rem;
-  margin-bottom: 0.5rem;
-}
-h3 {
-  color: $color_beige;
-  margin-bottom: 0.3rem;
-}
-p {
-  color: #fff;
-  &.loading {
-    color: $color_green;
-  }
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 button {
   background: $color_dark_brown;
   color: $color_yellow;
@@ -67,22 +29,10 @@ button {
 .menu {
   position: fixed;
   width: 100%;
-  header {
-    padding: 1.5rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $color_green;
-  }
+  // header {
+  // }
 }
-//main
-main {
-  border-radius: $theme_border_radius;
-  max-width: 800px;
-  margin: 0rem auto;
-  padding: 20px;
-  padding-top: 100px;
-}
+
 .post_list_section {
   > h2 {
     padding-left: 16px;
@@ -146,30 +96,30 @@ main {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  label {
-    color: $color_green;
-    text-align: left;
-    display: block;
-    margin: 2rem 0 1rem 0;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-  }
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    border: 1px solid $color_dark_brown;
-    box-sizing: border-box;
-    display: block;
-    background-color: $color_beige;
-    color: $color_dark_brown;
-    border-radius: $theme_border_radius;
-    font-size: 0.9rem;
-  }
+  // label {
+  //   color: $color_green;
+  //   text-align: left;
+  //   display: block;
+  //   margin: 2rem 0 1rem 0;
+  //   font-size: 0.7rem;
+  //   text-transform: uppercase;
+  //   letter-spacing: 1px;
+  //   font-weight: bold;
+  // }
+  // input,
+  // textarea,
+  // select {
+  //   width: 100%;
+  //   padding: 1rem;
+  //   margin: 0.5rem 0;
+  //   border: 1px solid $color_dark_brown;
+  //   box-sizing: border-box;
+  //   display: block;
+  //   background: #fff;
+  //   color: $color_dark_brown;
+  //   border-radius: $theme_border_radius;
+  //   font-size: 0.9rem;
+  // }
   textarea {
     min-height: 130px;
     border: 1px solid $color_dark_brown;
