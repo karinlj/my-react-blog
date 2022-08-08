@@ -26,13 +26,9 @@ const Navbar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
     </StyledNavbar>
   );
 };
-
 export default Navbar;
 
-interface StyleProps {
-  open: boolean;
-}
-const StyledNavbar = styled.nav<StyleProps>`
+const StyledNavbar = styled.nav<{ open: boolean }>`
   height: 100%;
   position: fixed; //obs!!
   top: 0;

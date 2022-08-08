@@ -25,11 +25,11 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <div className="App">
-        <div className="menu">
+      <div>
+        <section className="menu_section">
           <HeaderBar isBtnOpen={isBtnOpen} toggleOpen={toggleOpen} />
           <Navbar isBtnOpen={isBtnOpen} toggleOpen={toggleOpen} />
-        </div>
+        </section>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

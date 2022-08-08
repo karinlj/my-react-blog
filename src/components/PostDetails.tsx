@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { IPost } from "../interfaces";
+import { StyledButton, StyledLink, StyledSubHeader } from "./styles/style";
 
 const PostDetails = () => {
   const { post_id } = useParams();
@@ -32,24 +32,26 @@ const PostDetails = () => {
   }, [post]);
 
   return (
-    <section className="post_details">
+    <section>
       {isLoading && <p className="loading">Loading...</p>}
       {isError && <p>Oops, could not fetch data...</p>}
 
       {post && (
         <article>
-          <header>
+          <StyledSubHeader>
             <h2>{post.title}</h2>
-            <Link to={`/posts/edit/${post.id}`}>Edit</Link>
-          </header>
+            <StyledLink to={`/posts/edit/${post.id}`}>Edit</StyledLink>
+          </StyledSubHeader>
+          <section className="page_content">
+            <p className="post_author">
+              Written by: <span>{post.author}</span>
+            </p>
+            <p>{post.body}</p>
+          </section>
 
-          <p className="post_author">
-            Written by: <span>{post.author}</span>
-          </p>
-          <p className="post_body">{post.body}</p>
-          <button className="delete" onClick={handleClick}>
+          <StyledButton deleteBtn onClick={handleClick}>
             Delete Post
-          </button>
+          </StyledButton>
         </article>
       )}
     </section>

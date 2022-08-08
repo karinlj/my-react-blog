@@ -11,7 +11,6 @@ const HeaderBar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
     </StyledHeader>
   );
 };
-
 export default HeaderBar;
 
 const StyledHeader = styled.header`

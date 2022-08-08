@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IPost } from "../interfaces";
+import { StyledSubHeader, StyledButton } from "./styles/style";
 
 const CreatePost = () => {
   const defaultInputValues: IPost = {
@@ -68,8 +69,10 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="create_post">
-      <h2>Add a New Blog</h2>
+    <div className="form_page">
+      <StyledSubHeader>
+        <h2>Add a New Blog Post</h2>
+      </StyledSubHeader>
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -103,8 +106,10 @@ const CreatePost = () => {
           </select>
         </label>
 
-        {!isLoading && <button onClick={handleSubmit}>Add Post</button>}
-        {isLoading && <button disabled>Adding Post...</button>}
+        {!isLoading && (
+          <StyledButton onClick={handleSubmit}>Add Post</StyledButton>
+        )}
+        {isLoading && <StyledButton disabled>Adding Post...</StyledButton>}
       </form>
     </div>
   );

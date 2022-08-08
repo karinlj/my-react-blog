@@ -4,6 +4,7 @@ import { useFetch } from "../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { IPost } from "../interfaces";
+import { StyledSubHeader, StyledButton } from "./styles/style";
 
 const EditPost = () => {
   const { post_id } = useParams();
@@ -82,8 +83,11 @@ const EditPost = () => {
   };
 
   return (
-    <div className="edit_post">
-      <h2>Edit post</h2>
+    <div className="form_page">
+      <StyledSubHeader>
+        <h2>Edit post</h2>
+      </StyledSubHeader>
+
       {isLoading && <p className="loading">Loading...</p>}
       {isError && <p>Oops, could not fetch data...</p>}
       {data && (
@@ -117,9 +121,11 @@ const EditPost = () => {
           </label>
 
           {!isLoadingUpdate && (
-            <button onClick={handleSubmit}>Edit Post</button>
+            <StyledButton onClick={handleSubmit}>Edit Post</StyledButton>
           )}
-          {isLoadingUpdate && <button disabled>Editing Post...</button>}
+          {isLoadingUpdate && (
+            <StyledButton disabled>Editing Post...</StyledButton>
+          )}
         </form>
       )}
     </div>

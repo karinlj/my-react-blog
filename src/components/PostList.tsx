@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IPost } from "../interfaces";
+import { StyledSubHeader } from "./styles/style";
 
 type Props = {
   posts: IPost[];
@@ -7,9 +8,12 @@ type Props = {
 
 const PostList = ({ posts }: Props) => {
   return (
-    <section className="post_list_section">
-      <h2>All Blog Posts</h2>
-      <ul className="post_list">
+    <section>
+      <StyledSubHeader>
+        <h2>All Blog Posts</h2>
+      </StyledSubHeader>
+
+      <ul>
         {posts.map((post) => {
           return (
             <li className="post_preview" key={post.id}>

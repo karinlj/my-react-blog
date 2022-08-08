@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
+import { StyledLink, StyledSubHeader } from "./styles/style";
 
 const NotFound = () => {
   return (
     <div className="not_found_page">
-      <h2>Sorry...</h2>
-      <p>That page cannot be found.</p>
-      <Link to="/">Back to Home</Link>
+      <StyledSubHeader>
+        <h2>Sorry...</h2>
+      </StyledSubHeader>
+
+      <section className="page_content">
+        <p>That page cannot be found.</p>
+      </section>
+      <StyledLink to="/">Back to Home</StyledLink>
     </div>
   );
 };
