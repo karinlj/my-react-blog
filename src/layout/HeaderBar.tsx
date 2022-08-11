@@ -7,7 +7,10 @@ const HeaderBar = ({ isBtnOpen, toggleOpen }: IHeaderBarProps) => {
   return (
     <StyledHeader className="header">
       <BurgerBtn isBtnOpen={isBtnOpen} toggleOpen={toggleOpen} />
-      <span className="title">My React Blog</span>
+      <div>
+        <p className="title">My React Blog</p>
+        <p>With TypeScript and Styled-components</p>
+      </div>
     </StyledHeader>
   );
 };
@@ -19,9 +22,11 @@ const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid ${Colors.color_green};
+  p {
+    color: ${Colors.color_yellow};
+  }
   .title {
     font-size: 2rem;
-    color: ${Colors.color_yellow};
     font-weight: bold;
   }
 `;

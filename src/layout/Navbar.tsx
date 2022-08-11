@@ -40,7 +40,7 @@ const StyledNavbar = styled.nav<{ open: boolean }>`
   padding-top: 6rem;
   transition: left ease-in 0.3s; //obs!
   text-align: left;
-  background: ${Colors.color_yellow};
+  background: ${Colors.color_beige};
   a {
     color: ${Colors.color_dark_brown};
     display: block;
