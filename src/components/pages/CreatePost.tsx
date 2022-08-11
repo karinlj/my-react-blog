@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { IPost } from "../interfaces";
-import { StyledSubHeader, StyledButton } from "./styles/style";
+import { IPost } from "../../interfaces";
+import {
+  StyledSubHeader,
+  StyledButton,
+  StyledInput,
+  StyledTextarea,
+  StyledSelect,
+  StyledLabel,
+} from "../styles/style";
 
 const CreatePost = () => {
   const defaultInputValues: IPost = {
@@ -75,9 +82,9 @@ const CreatePost = () => {
       </StyledSubHeader>
 
       <form onSubmit={handleSubmit}>
-        <label>
+        <StyledLabel>
           Title:
-          <input
+          <StyledInput
             type="text"
             placeholder="Title"
             required
@@ -85,26 +92,32 @@ const CreatePost = () => {
             id="title"
             onChange={handleChange}
           />
-        </label>
+        </StyledLabel>
 
-        <label>
+        <StyledLabel>
           Body:
-          <textarea
+          <StyledTextarea
+            as="textarea"
             required
             placeholder="Something happened..."
             value={body}
             id="body"
             onChange={handleChange}
-          ></textarea>
-        </label>
+          ></StyledTextarea>
+        </StyledLabel>
 
-        <label>
+        <StyledLabel>
           Author:
-          <select value={author} id="author" onChange={handleChange}>
+          <StyledSelect
+            as="select"
+            value={author}
+            id="author"
+            onChange={handleChange}
+          >
             <option value="hugo">Hugo</option>
             <option value="filip">Filip</option>
-          </select>
-        </label>
+          </StyledSelect>
+        </StyledLabel>
 
         {!isLoading && (
           <StyledButton onClick={handleSubmit}>Add Post</StyledButton>

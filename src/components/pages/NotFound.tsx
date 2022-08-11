@@ -1,4 +1,4 @@
-import { StyledLink, StyledSubHeader } from "./styles/style";
+import { StyledLink, StyledSubHeader } from "../styles/style";
 
 const NotFound = () => {
   return (

@@ -64,3 +64,34 @@ export const StyledSubHeader = styled.header`
   justify-content: space-between;
   margin: 4rem 0 0.5rem 0;
 `;
+
+export const StyledInput = styled.input`
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid ${Colors.color_dark_brown};
+  box-sizing: border-box;
+  display: block;
+  background: #fff;
+  color: ${Colors.color_dark_brown};
+  border-radius: ${Variables.theme_border_radius};
+  font-size: 0.9rem;
+`;
+
+export const StyledTextarea = styled(StyledInput)`
+  min-height: 190px;
+  line-height: 1.6;
+`;
+
+export const StyledSelect = styled(StyledInput)``;
+
+export const StyledLabel = styled.label`
+  color: ${Colors.color_green};
+  text-align: left;
+  display: block;
+  margin: 2rem 0 1rem 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+`;

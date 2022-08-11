@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { IPost } from "../interfaces";
-import { StyledButton, StyledLink, StyledSubHeader } from "./styles/style";
+import { IPost } from "../../interfaces";
+import { StyledButton, StyledLink, StyledSubHeader } from "../styles/style";
 
 const PostDetails = () => {
   const { post_id } = useParams();

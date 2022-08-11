@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { IPost } from "../interfaces";
-import { StyledSubHeader, StyledButton } from "./styles/style";
+import { IPost } from "../../interfaces";
+import {
+  StyledSubHeader,
+  StyledButton,
+  StyledInput,
+  StyledTextarea,
+  StyledSelect,
+  StyledLabel,
+} from "../styles/style";
 
 const EditPost = () => {
   const { post_id } = useParams();
@@ -92,33 +99,39 @@ const EditPost = () => {
       {isError && <p>Oops, could not fetch data...</p>}
       {data && (
         <form onSubmit={handleSubmit}>
-          <label>
+          <StyledLabel>
             Title:
-            <input
+            <StyledInput
               type="text"
               required
               value={title}
               id="title"
               onChange={handleChange}
             />
-          </label>
-          <label>
+          </StyledLabel>
+          <StyledLabel>
             Body:
-            <textarea
+            <StyledTextarea
+              as="textarea"
               required
               value={body}
               id="body"
               onChange={handleChange}
-            ></textarea>
-          </label>
-          <label>
+            ></StyledTextarea>
+          </StyledLabel>
+          <StyledLabel>
             Author:
-            <select value={author} id="author" onChange={handleChange}>
+            <StyledSelect
+              as="select"
+              value={author}
+              id="author"
+              onChange={handleChange}
+            >
               <option value={author}>{author}</option>
               <option value="Hugo">Hugo</option>
               <option value="Filip">Filip</option>
-            </select>
-          </label>
+            </StyledSelect>
+          </StyledLabel>
 
           {!isLoadingUpdate && (
             <StyledButton onClick={handleSubmit}>Edit Post</StyledButton>

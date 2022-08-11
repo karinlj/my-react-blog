@@ -1,12 +1,12 @@
 import Navbar from "./layout/Navbar";
 import HeaderBar from "./layout/HeaderBar";
 import { useState, useEffect } from "react";
-import Home from "./components/Home";
+import Home from "./components/pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CreatePost from "./components/CreatePost";
-import PostDetails from "./components/PostDetails";
-import NotFound from "./components/NotFound";
-import EditPost from "./components/EditPost";
+import CreatePost from "./components/pages/CreatePost";
+import PostDetails from "./components/pages/PostDetails";
+import NotFound from "./components/pages/NotFound";
+import EditPost from "./components/pages/EditPost";
 import { GlobalStyles } from "./components/styles/Global";
 
 //calling it Router

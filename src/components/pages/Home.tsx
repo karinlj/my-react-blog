@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import PostList from "./PostList";
-import { useFetch } from "../hooks/useFetch";
-import { IPost } from "../interfaces";
+import PostList from "../PostList";
+import { useFetch } from "../../hooks/useFetch";
+import { IPost } from "../../interfaces";
 
 const Home = () => {
   const url = "http://localhost:9000/posts";
