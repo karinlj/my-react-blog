@@ -11,7 +11,7 @@ const PostList = ({ posts }: Props) => {
   return (
     <StyledPostList>
       <StyledSubHeader>
-        <h2>All Blog Posts</h2>
+        <h1>All Blog Posts</h1>
       </StyledSubHeader>
       <ul>
         {posts.map((post) => {
@@ -19,7 +19,7 @@ const PostList = ({ posts }: Props) => {
             <li key={post.id}>
               {/* url+variable */}
               <Link to={`/posts/${post.id}`}>
-                <h3>{post.title}</h3>
+                <h2>{post.title}</h2>
                 <p className="post_author">
                   Written by: <span>{post.author}</span>
                 </p>

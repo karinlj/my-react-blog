@@ -61,24 +61,12 @@ const CreatePost = () => {
     };
 
     postNewPost();
-    // fetch(uri, {
-    //   method: "POST",
-    //   //type of content
-    //   headers: { "Content-Type": "application/json" },
-    //   //the data we send made to a json string
-    //   body: JSON.stringify(newPost),
-    // }).then(() => {
-    //   console.log("newPost added");
-    //   setIsLoading(false);
-    //   //back 1
-    //   navigate(-1);
-    // });
   };
 
   return (
     <div className="form_page">
       <StyledSubHeader>
-        <h2>Add a New Blog Post</h2>
+        <h1>Add a New Blog Post</h1>
       </StyledSubHeader>
 
       <form onSubmit={handleSubmit}>

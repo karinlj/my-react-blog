@@ -33,19 +33,20 @@ const StyledNavbar = styled.nav<{ open: boolean }>`
   position: fixed; //obs!!
   top: 0;
   left: ${({ open }) => (open ? "0" : "-250px")}; //obs!
-  z-index: 0; //obs!  //same parent as header and vego_burger in that
+  z-index: 0; //obs!  //same parent as header and vego_burger inside
   height: 100%;
   width: 250px; //obs!
   padding: 3rem;
   padding-top: 6rem;
   transition: left ease-in 0.3s; //obs!
   text-align: left;
-  background: ${Colors.color_beige};
+  background: ${Colors.color_yellow};
   a {
     color: ${Colors.color_dark_brown};
     display: block;
     margin-bottom: 0.8rem;
     text-decoration: none;
+    font-weight: 500;
     &:hover {
       div {
         color: ${Colors.color_green};

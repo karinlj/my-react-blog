@@ -11,19 +11,19 @@ body {
   font-family: "Quicksand";
   box-sizing: border-box;
 }
+
 h1 {
-  color: ${Colors.color_yellow}; 
-}
-h2 {
   color: ${Colors.color_green}; 
   font-size: 1.5rem;
 }
-h3 {
-    color: ${Colors.color_beige};   
+h2{
+    color: ${Colors.color_beige};
+    color: ${Colors.text_color};    
     margin-bottom: 0.3rem;
+    font-size: 1.3rem;
 }
 p {
-  color: #fff;
+    color: ${Colors.text_color}; 
   &.loading {
     color: ${Colors.color_green};
   }
@@ -44,8 +44,8 @@ main {
   padding-top: 100px;
 }
 .menu_section {
-  position: fixed;
-  width: 100%;
+  /* position: fixed;
+  width: 100%; */
 }
 .page_content{
     margin-bottom: 1.5rem;

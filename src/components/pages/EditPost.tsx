@@ -75,24 +75,12 @@ const EditPost = () => {
       navigate("/");
     };
     postEditedPost();
-    // fetch(url, {
-    //   method: "PUT",
-    //   //type of content
-    //   headers: { "Content-Type": "application/json" },
-    //   //the data we send made to a json string
-    //   body: JSON.stringify(editedPost), //update post
-    // }).then(() => {
-    //   //console.log("updated post in db");
-    //   setIsLoadingUpdate(false);
-    //   //back 1
-    //   navigate("/");
-    // });
   };
 
   return (
     <div className="form_page">
       <StyledSubHeader>
-        <h2>Edit post</h2>
+        <h1>Edit post</h1>
       </StyledSubHeader>
 
       {isLoading && <p className="loading">Loading...</p>}

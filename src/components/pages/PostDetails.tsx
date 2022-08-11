@@ -39,7 +39,7 @@ const PostDetails = () => {
       {post && (
         <article>
           <StyledSubHeader>
-            <h2>{post.title}</h2>
+            <h1>{post.title}</h1>
             <StyledLink to={`/posts/edit/${post.id}`}>Edit</StyledLink>
           </StyledSubHeader>
           <section className="page_content">
